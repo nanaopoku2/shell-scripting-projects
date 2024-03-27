@@ -1,4 +1,9 @@
 #!/bin/bash
+#About:This script provide names of collaborators in the repository
+#Input:Export your username & token, provide the organization name and prepo-name as a parameter to run the script
+#owner:Bright Opoku
+#
+helper()
 
 # GitHub API URL
 API_URL="https://api.github.com"
@@ -35,7 +40,12 @@ function list_users_with_read_access {
         echo "$collaborators"
     fi
 }
-
+function helper{
+expercted_cmd_args=2
+if [$# ne $expercted_cmd_args], then
+echo"Please execute the script with cmd arg"
+echo"Please refer to the comment section"
+}
 # Main script
 
 echo "Listing users with read access to ${REPO_OWNER}/${REPO_NAME}..."
