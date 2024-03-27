@@ -40,6 +40,7 @@ function list_users_with_read_access {
         echo "$collaborators"
     fi
 }
+#Helper function
 function helper{
 expercted_cmd_args=2
 if [$# ne $expercted_cmd_args], then
